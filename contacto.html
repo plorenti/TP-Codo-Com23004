@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="quienes-somos.html">NOSOTROS</a></li>
+                <li><a href="viajes-personalizados.html">VIAJES PERSONALIZADOS</a></li>
+                <li><a href="agencia.html">AGENCIA</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+    
+            </ul>
+        </nav>
+    </header>
+    <h1>Formulario de Contacto</h1>
+
+    <form action="https://formspree.io/f/mlekwrjg" method="POST">
+        <div>
+            <label for="fname"> Nombre: </label>
+            <input id="fname" type="text" name="fname">
+        </div>
+        
+        <div>
+            <label for="femail"> Email: </label>
+            <input id="femail" type="email" name="femail" required>
+        </div>
+        <div>
+            <input type="radio" value="General" id="opt_info" name="tipo_viaje"> <label for="opt_info">Información
+                General</label>
+            <input type="radio" value="Agencia" id="opt_agencia" name="tipo_viaje"> <label
+                for="opt_agencia">Viajes Agencia</label>
+            <input type="radio" value="Personalizados" id="opt_viajes_pers" name="tipo_viaje"> <label
+                for="opt_viajes_pers">Viajes Personalizados</label>
+        </div>
+        <div>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpiar formulario">
+        </div>
+
+    </form>
+
+</body>
+</html>
