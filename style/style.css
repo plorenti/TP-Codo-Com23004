@@ -1,36 +1,48 @@
 *{
-   margin: 0;
-    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
 }
-html{
-    font-size: 1rem;
-    height: 100%;
-}
-main{
+.item-contenedor{
     background-color: aqua;
-    width: 70%;
+    padding: 10px;
+    text-align: center;
+    border-color: #fff;
+    border-width: 1px;
+    justify-content: c;
+}
+.contenedor{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    width: 850px;
+     
     justify-content: center;
 }
-aside{
-    background-color: blueviolet;
-    color: aliceblue;
-    width: 30%;
+
+@keyframes nav-links {
+    0%{background-color: rgb(255, 255, 255);}
+    25%{background-color: rgb(90, 0, 30);}
+    50%{background-color: rgb(204, 204, 204);}
+    100% {background-color: palevioletred;}
+    
 }
 
- body {
-    background-color: #f4eee9;
-    display: flex;
-    padding: 5px;
-    flex-direction: column;
-
-} 
- header {
+header{
     display: flex;
     justify-content: center;
-} 
+}
+
+
+.principal{
+
+flex:70;
+}
+.cont-aside{
+    flex:30;
+}
 nav{
     background-color: beige;
-    padding: 10px;
+    padding: 10px ;
     display: flex;
     justify-content: center;
 }
@@ -39,10 +51,10 @@ nav{
     color: #fff;
     background-color: deeppink;
     padding: 5px 15px;
+    
     text-decoration: none;
     border-radius: 5px;
 }
-
 .nav-links:hover{
     display: inline-block;
     color: #fff;
@@ -51,45 +63,6 @@ nav{
     text-decoration: none;
     border-radius: 5px;
     text-shadow: black;
+    animation: nav-links;
+    animation-duration: 2s;
 }
-.carrusel-item{
-    
-}
-
-@media (max-width: 600px){
-
-}
-
-
-@media (min-width: 1000px){
-    
-}
-
-
-
-
-/* nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-   
-}
-
-nav ul li {
-    float: left;
-}
-
-nav ul li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    color: black;
-    text-decoration: overline underline;
-} */
-
