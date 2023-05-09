@@ -1,4 +1,4 @@
-document.getElementById("header").innerHTML =`
+/*document.getElementById("header").innerHTML =`
 <div class="container-fluid bg-light mb-30">
 <div class="row">
    
@@ -136,3 +136,4 @@ document.getElementById("footer").innerHTML=`
 
 `
 
+*/

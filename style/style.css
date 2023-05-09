@@ -1,5 +1,5 @@
 *{
-    padding: 0;
+   margin: 0;
     box-sizing: border-box;
 }
 html{
@@ -8,15 +8,65 @@ html{
 }
 main{
     background-color: aqua;
+    width: 70%;
+    justify-content: center;
+}
+aside{
+    background-color: blueviolet;
+    color: aliceblue;
+    width: 30%;
 }
 
-/* body {
+ body {
     background-color: #f4eee9;
-} */
+    display: flex;
+    padding: 5px;
+    flex-direction: column;
 
-/* header {
-    background-color: #A2CCD7;
-} */
+} 
+ header {
+    display: flex;
+    justify-content: center;
+} 
+nav{
+    background-color: beige;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+.nav-links{
+    display: inline-block;
+    color: #fff;
+    background-color: deeppink;
+    padding: 5px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.nav-links:hover{
+    display: inline-block;
+    color: #fff;
+    background-color: palevioletred;
+    padding: 5px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    text-shadow: black;
+}
+.carrusel-item{
+    
+}
+
+@media (max-width: 600px){
+
+}
+
+
+@media (min-width: 1000px){
+    
+}
+
+
+
 
 /* nav ul {
     list-style-type: none;
