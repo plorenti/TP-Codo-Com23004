@@ -1,17 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap');
+@import "https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css";
 *{
     margin: 0;
     padding: 0;
     justify-content: center;
+    font-family: 'Signika';
+}
+body{
+    margin: 0 auto;
+    max-width: 1000px;
 }
 header{
     display: flex;
     justify-content: center;
 }
-
+p{
+    margin: 1em;
+}
 
 .contenedor{
     display: grid;
-    grid-template-rows: 2fr 1fr 4fr 2fr;
+   /* grid-template-rows: 1fr 1fr 4fr 3fr;*/
     grid-template-columns: repeat(4, 1fr);
     gap: 5px;
     justify-content: center;
@@ -24,7 +33,7 @@ header{
 }
 .item{
     background-color: aqua;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
     border-color: #fff;
     border-width: 1px;
@@ -32,11 +41,19 @@ header{
 }
 .item-header{
     grid-area: header;
+    background-color: blueviolet;
+    height: fit-content;
+}
+.item-header img{
+    background-color: brown;
+   
+    max-width: 100%;
+    height: auto;
 }
 .item-nav{
     grid-area: nav;
     background-color: beige;
-    padding: 10px ;
+    padding: 1px ;
     display: flex;
     justify-content: center;
 }
@@ -54,7 +71,8 @@ header{
 }
 @media screen and (max-width:300px){
     .contenedor{
-        grid-template-rows:repeat(4,2fr);
+       /* grid-template-rows:repeat(4,2fr);*/
+      
         grid-column: 1fr;
         grid-template-areas: 
         'main main main main';
@@ -75,9 +93,10 @@ header{
         display: none;
     }
 }
-@media screen and (max-width:480px){
+@media screen and (max-width:420px){
     .contenedor{
-        grid-template-rows:repeat(4,2fr);
+     /*grid-template-rows:repeat(4,2fr);*/
+   /*  grid-template-rows: 1fr 1fr 2fr 2fr;*/
         grid-column: 1fr;
         grid-template-areas: 
         'nav nav nav nav'
@@ -117,8 +136,63 @@ header{
     
 }
 
+.item-carrusel{
+    width: 90%;
+    max-width: 120em;
+    background-color: azure;
 
+}
+.carrusel-grande{
+    width: 200%;
+    background-color: cadetblue;
+    overflow: hidden;
+    justify-content: space-between;
+    transition: all .5s ease;
+    transform: translateX(-0%);
+}
+.carrusel .img{
+    width: calc(100% /2);
+    background-color: aliceblue;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 80px;
+}
+.carrusel .puntos{
+    width: 100%;
+    background-color: blueviolet;
+    padding: 5px;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+.carrusel .punto{
+    width: 2em;
+    height: 2em;
+    background-color: chocolate;
+    margin: 1em;
+}
 
+aside li img{
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 100%;
+    
+}
+aside li{
+    list-style: none;
+       
+}
+li a{
+    text-decoration: none;
+    color: #000;
+}
+li a:visited{
+    text-decoration: none;
+    color: #000;
+}
 nav{
     background-color: beige;
     padding: 10px ;
