@@ -1,132 +1,105 @@
 @import url('https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap');
 @import "https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css";
 *{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    justify-content: center;
-    font-family: 'Signika';
+
+}
+html{
+    height: 100%;
 }
 body{
-    margin: 0 auto;
-    max-width: 1000px;
+    font-family: 'Signika';
+font-size: 1.2rem;
+min-height: 100%;
 }
-header{
-    display: flex;
-    justify-content: center;
+.header{
+    grid-area: header;
+    background-color: aquamarine;
+    align-items: center;
 }
-p{
-    margin: 1em;
+.header img{
+    max-width: 100%;
+    
+    height: 100%;
+  
 }
-
+.navbar{
+    grid-area: navbar;
+    background-color: lightpink;
+}
+.principal{
+    grid-area: main;
+    background-color: lightcoral;
+}
+.sidebar{
+    grid-area: sidebar;
+    background-color: lightskyblue;
+}
+.footer{
+    grid-area: footer;
+    background-color: mediumspringgreen;
+}
+.contenedor > *{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
 .contenedor{
     display: grid;
-   /* grid-template-rows: 1fr 1fr 4fr 3fr;*/
-    grid-template-columns: repeat(4, 1fr);
     gap: 5px;
-    justify-content: center;
-    grid-template-areas: 
-    'header header header header'
-    'nav nav nav nav'
-    'main main main aside'
-    'carrusel carrusel carrusel carrusel'
-    'footer footer footer footer';
+    grid-template:
+    "header " 100px
+    "navbar" 50px
+    "main" auto
+    "footer"  150px /
+    auto;
+    
 }
-.item{
-    background-color: aqua;
-    padding: 5px;
-    text-align: center;
-    border-color: #fff;
-    border-width: 1px;
-    justify-content: center;
-}
-.item-header{
-    grid-area: header;
-    background-color: blueviolet;
-    height: fit-content;
-}
-.item-header img{
-    background-color: brown;
-   
-    max-width: 100%;
-    height: auto;
-}
-.item-nav{
-    grid-area: nav;
-    background-color: beige;
-    padding: 1px ;
-    display: flex;
-    justify-content: center;
-}
-.item-main{
-    grid-area: main;
-}
-.item-aside{
-    grid-area: aside;
-}
-.item-carrusel{
-    grid-area: carrusel;
-}
-.item-footer{
-    grid-area: footer;
-}
-@media screen and (max-width:300px){
+@media(max-width:599px){
+    .sidebar{
+        display: none;
+    }
+    .header img{
+        height: auto;
+    }
+}    
+
+@media(min-width: 600px){
     .contenedor{
-       /* grid-template-rows:repeat(4,2fr);*/
-      
-        grid-column: 1fr;
-        grid-template-areas: 
-        'main main main main';
-
-
-
-    }
-    .item-aside{
-        display: none;
-    }
-    .item-nav{
-        display: none;
-    }
-    .item-carrusel{
-        display: none;
-    }
-    .item-header{
-        display: none;
-    }
-}
-@media screen and (max-width:420px){
-    .contenedor{
-     /*grid-template-rows:repeat(4,2fr);*/
-   /*  grid-template-rows: 1fr 1fr 2fr 2fr;*/
-        grid-column: 1fr;
-        grid-template-areas: 
-        'nav nav nav nav'
-        'main main main main'
-        'main main main main'
-        'main main main main'
-        'aside aside aside aside'
-        'footer footer footer footer';
-
-    }
-    .item-carrusel{
-        display: none;
-    }
-    .item-header{
-        display: none;
-    }
-}
-
-@media screen and (max-width:760px){
-    .contenedor{
+     /*   grid-template-columns: auto 200px;
+        grid-template-rows: 100px 50px auto 150px;
+        grid-template-areas:
+        "header header"
+        "navbar navbar"
+        "main sidebar"
+        "footer footer";*/
        
-        grid-template-areas: 
-        'header header header header'
-        'nav nav nav nav'
-        'main main main main'
-        'carrusel carrusel carrusel carrusel'
-        'aside aside aside aside'
-        'footer footer footer footer';
+        grid-template:
+        "header header" 100px
+        "navbar navbar" 50px
+        "main main" auto
+        "sidebar sidebar" 150px
+        "footer footer" 150px /
+        auto 200px;
+
     }
-  
+}
+
+@media(min-width: 900px){
+    .contenedor{
+
+       
+        grid-template:
+        "header header" 100px
+        "navbar navbar" 50px
+        "main sidebar" auto
+        "footer footer" 150px /
+        auto 200px;
+
+    }
 }
 @keyframes nav-links {
     0%{background-color: rgb(255, 255, 255);}
@@ -134,70 +107,6 @@ p{
     50%{background-color: rgb(204, 204, 204);}
     100% {background-color: palevioletred;}
     
-}
-
-.item-carrusel{
-    width: 90%;
-    max-width: 120em;
-    background-color: azure;
-
-}
-.carrusel-grande{
-    width: 200%;
-    background-color: cadetblue;
-    overflow: hidden;
-    justify-content: space-between;
-    transition: all .5s ease;
-    transform: translateX(-0%);
-}
-.carrusel .img{
-    width: calc(100% /2);
-    background-color: aliceblue;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
-    min-height: 80px;
-}
-.carrusel .puntos{
-    width: 100%;
-    background-color: blueviolet;
-    padding: 5px;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    
-}
-.carrusel .punto{
-    width: 2em;
-    height: 2em;
-    background-color: chocolate;
-    margin: 1em;
-}
-
-aside li img{
-    max-width: 100px;
-    max-height: 100px;
-    border-radius: 100%;
-    
-}
-aside li{
-    list-style: none;
-       
-}
-li a{
-    text-decoration: none;
-    color: #000;
-}
-li a:visited{
-    text-decoration: none;
-    color: #000;
-}
-nav{
-    background-color: beige;
-    padding: 10px ;
-    display: flex;
-    justify-content: center;
 }
 .nav-links{
     display: inline-block;
@@ -228,4 +137,22 @@ nav{
     border-radius: 5px;
     text-shadow: black;
 
+}
+aside li img{
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 100%;
+    
+}
+aside li{
+    list-style: none;
+       
+}
+li a{
+    text-decoration: none;
+    color: #000;
+}
+li a:visited{
+    text-decoration: none;
+    color: #000;
 }
