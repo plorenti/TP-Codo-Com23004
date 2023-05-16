@@ -54,14 +54,13 @@ min-height: 100%;
     "header " 100px
     "navbar" 50px
     "main" auto
+    "sidebar" auto
     "footer"  150px /
     auto;
     
 }
 @media(max-width:599px){
-    .sidebar{
-        display: none;
-    }
+  
     .header img{
         height: auto;
     }
@@ -155,4 +154,84 @@ li a{
 li a:visited{
     text-decoration: none;
     color: #000;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 10px;
+  }
+  .galeria img {
+    width: 100%;
+    height: auto;
+    
+  }
+  .foto{
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  .foto img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  label{
+    width: 100%;
+    display: block;
+    padding-bottom: 10px; 
+}
+/* #formulario{
+    margin-left: 20%;
+} */
+main{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+#main-section{
+    border: 3px red solid;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    /* width: 100vw; */
+    padding: 20px 0;
+}
+
+
+
+#form-registro{
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    align-items: center;
+    background: #e2e2e2;
+    padding: 35px;
+    border-radius: 10px;
+}
+
+.subtitle{
+    padding: 15px 0 30px;
+    color: grey;
+}
+.form-group{
+    padding: 10px 15px;
+}
+.input{
+    padding: 8px 15px;
+    border: solid 1px grey;
+    border-radius: 5px;
+}
+
+#main-section .section:first-child{
+    max-width: 600px;
+}
+.form-group:last-child{
+    width:100%;
 }
