@@ -19,7 +19,7 @@ min-height: 100%;
 }
 .header{
     grid-area: header;
-    background-color: aquamarine;
+    background-color: #A7BED3;
     align-items: center;
 }
 header nav{
@@ -94,11 +94,11 @@ header nav{
 
 .principal{
     grid-area: main;
-    background-color: lightcoral;
+    background-color: #A7BED3;
 }
 .sidebar{
     grid-area: sidebar;
-    background-color: lightskyblue;
+    background-color: #A7BED3;
 }
 .footer{
     grid-area: footer;
